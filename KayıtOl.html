@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="div1">
+    <h1>KAYIT OL</h1> <br>
+    <p>E-MAİL</p> <input id="email"> <br><br>
+    <P>ŞİFRE</P> <input type="password" id="password"> <br><br><br>
+    <button onclick="newPage()">KAYDI TAMAMLA</button>
+</div>
+
+<script src="firebase-app.js"></script>
+<script src="firebase-auth.js"></script>
+<script>
+     // Your web app's Firebase configuration
+     var firebaseConfig = {
+            apiKey: "AIzaSyBLbhUEfBuUtCe5w02GSuDk-28zxmd27Ww",
+            authDomain: "word-s-acf5b.firebaseapp.com",
+            databaseURL: "https://word-s-acf5b.firebaseio.com",
+            projectId: "word-s-acf5b",
+            storageBucket: "word-s-acf5b.appspot.com",
+            messagingSenderId: "760435390812",
+            appId: "1:760435390812:web:a4ba49250d527fd21d6999"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+        function newPage(){
+            
+            auth = firebase.auth();
+        
+            auth.createUserWithEmailAndPassword(email.value , password.value).then(()=> {
+                firebase.auth().signInWithEmailAndPassword(email.value , password.value)
+                    .then(()=>{
+                        window.location.href = "KelimeHızı.html"})
+                    })
+                .catch((e)=>{alert(e)})}
+                      
+            
+                
+          
+            
+        
+        
+        
+</script>
+
+<style>
+
+    #div1{
+        text-align: center;
+    }
+</style>
+     
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

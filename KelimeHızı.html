@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body onload="as()">
+<div id="buton">
+<button id="logout">ÇIKIŞ YAP</button>
+</div>
+<div id="div">
+<h3 id="word"></h3> <br><br><br>
+
+<input id="text" onkeydown="sa()">
+
+<button onclick="kelime()" id="btn">DEVAM</button> <br><br><br>
+
+<h1 id="zaman">20</h1> <br><br><br>
+
+<h1>PUAN</h1> <h2 id="point">0</h2>
+<button id="kaydetp">PUANIMI KAYDET</button> <br><br><br>
+<button onclick="showRanks()">YAPTIĞIM PUANLARI GÖSTER</button>
+</div>
+<script src="firebase-app.js"></script>
+<script src="firebase-auth.js"></script>
+<script src="firebase-database.js"></script>
+<script src="KelimeHızı.js">
+
+</script>
+
+<style>
+    #div{
+        text-align: center;
+    }
+    #buton{
+        text-align: right;
+    }
+
+
+
+</style>
+
+</body>
+
+</html>
